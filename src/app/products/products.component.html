@@ -1,0 +1,70 @@
+<h1>{{title}}</h1>
+<!--div class="container">
+    <div class="col-md-1">
+<button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+</div>
+</div-->
+
+<div class="container">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Product List
+    </div>
+    <div class="panel-body">
+        <div class="row">
+        <div class="col-md-2">Fileter BY: </div>
+            <div class="col-md-4">
+             <input type="text"  [(ngModel)] = "myFilter"
+                placeholder="Enter your text"/>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 id="headFilter">Filtered By: {{myFilter}}</h3>
+                
+            </div>
+            
+        </div>
+        <button class="btn btn-danger" (click)=toggleTable()>{{show?"Hide Table":"ShowTable"}}</button>
+    <div class="table-responsive" *ngIf="show">
+        <table class="table">
+            <thead>
+                <tr>
+                   <!-- <th>
+                        <button type="button" class="btn btn-success ">Show Image</button>
+                    </th>-->
+                    <th>Name</th>
+                    <th>Age</th> 
+                    <th>Education</th>
+                    <th>Work Location</th>
+                    <th>Star Rating</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let product of products|myProductFilter:myFilter">
+                            
+                            <td>{{product.name|uppercase}}</td>
+                            <td>{{product.age|currency:"GBP"}}</td>
+                            <!--td>{{product.starRating}}</td-->
+                            <td>{{product.education}}</td>
+                            <td>{{product.workLocation}}</td>
+                            <td>{{product.starRating}}</td>
+                            
+                            
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+            
+    </div>
+</div>
+</div>

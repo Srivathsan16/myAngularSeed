@@ -1,0 +1,16 @@
+[
+    {
+        "field1" : "Srivathsan",
+        "field2" : 25,
+        "field3" : "B.Tech",
+        "field4" : "Onsite",
+        "field5" : "Excellent"
+    },
+    {
+        "field1" : "Mani",
+        "field2" : 22,
+        "field3" : "B.Tech",
+        "field4" : "Offsite",
+        "field5" : "Excellent"
+    }
+]
